@@ -51,6 +51,7 @@ router.get('/add', function(req, res) {
                     title: 'it worked! :O',
                     message: 'yayayay'
                 });
+                res.redirect("/users");
             }
         });
     } else {
@@ -58,6 +59,7 @@ router.get('/add', function(req, res) {
             title: 'uhhhh',
             message: 'you need to pass a name and password url param'
         });
+        res.redirect("/users");
     }
 });
 
@@ -83,6 +85,7 @@ router.get('/remove/:name/', function(req, res) {
             }, function(err, user) {
                 if (err) res.send('uh oh')
                 res.send('done');
+            res.redirect("/users");
             })
         })
     } else {

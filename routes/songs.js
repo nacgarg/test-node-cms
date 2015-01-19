@@ -53,6 +53,7 @@ router.get('/add', function(req, res) {
                     title: 'it worked! :O',
                     message: 'yayayay'
                 });
+                res.redirect("/songs");
             }
         });
     } else {
@@ -60,6 +61,7 @@ router.get('/add', function(req, res) {
             title: 'uhhhh',
             message: 'you need to pass a name, artist and html url param'
         });
+        res.redirect("/songs");
     }
 });
 
@@ -87,6 +89,7 @@ router.get('/remove/:name/', function(req, res) {
             }, function(err, user) {
                 if (err) res.send('uh oh')
                 res.send('done');
+            res.redirect("/songs");
             })
         })
     } else {
