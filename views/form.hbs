@@ -1,0 +1,21 @@
+<h1>Add User</h1>name: <textarea id='name'></textarea><br>
+pwd: <textarea id='password'></textarea>
+<script>
+var dostuff = function(){
+name = document.getElementById('name').value
+password = document.getElementById('password').value
+window.location.href=('http://{{url}}/users/add?name=' + name +'&password='+password)}
+</script>
+<button onclick='dostuff()'>Submit</a></button>
+
+<h1>Add Song</h1>name: <textarea id='name1'></textarea><br>
+artist: <textarea id='password1'></textarea><br>
+embed-html: <textarea id='html'></textarea>
+<script>
+var dostuff2 = function(){
+name = document.getElementById('name1').value
+password = document.getElementById('password1').value
+html = document.getElementById('html').value
+window.location.href=('http://{{url}}/songs/add?name=' + name +'&artist='+password+'&html='+html)}
+</script>
+<button onclick='dostuff2()'>Submit</a></button>
